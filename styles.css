@@ -1,6 +1,6 @@
 body{
 margin:0;
-font-family:system-ui,-apple-system,Segoe UI,Roboto;
+font-family:system-ui, -apple-system, Segoe UI, Roboto;
 background:#0b0f17;
 color:white;
 }
@@ -9,92 +9,106 @@ color:white;
 width:90%;
 max-width:1100px;
 margin:auto;
-padding-top:40px;
+padding:40px 0;
 }
 
-/* HERO */
+/* NAV /
+
+.header{
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:90%;
+max-width:1100px;
+margin:auto;
+padding:14px 0;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+font-size:14px;
+}
+
+.nav-links a{
+color:#aaa;
+text-decoration:none;
+}
+
+/ HERO /
 
 .hero{
 display:grid;
-grid-template-columns:1.2fr 1fr;
+grid-template-columns:1.3fr 1fr;
 gap:40px;
 align-items:center;
-}
-
-.kicker{
-color:#aab;
-font-size:12px;
-letter-spacing:1px;
-margin-bottom:10px;
 }
 
 .hero-title{
 font-size:60px;
 margin:0;
-line-height:1.1;
+}
+
+.hero-sub{
+margin:12px 0 20px;
+color:#aaa;
+}
+
+.kicker{
+font-size:12px;
+letter-spacing:1px;
+color:#888;
 }
 
 .muted{
 opacity:.7;
 }
 
-.hero-sub{
-margin-top:12px;
-margin-bottom:20px;
-opacity:.8;
-}
-
-/* BUTTONS */
+/ BUTTONS /
 
 .cta-row{
 display:flex;
 gap:12px;
-margin-bottom:20px;
+margin-bottom:14px;
 }
 
 .btn{
-padding:12px 20px;
-border-radius:14px;
+padding:12px 18px;
+border-radius:12px;
 text-decoration:none;
 font-weight:600;
 }
 
 .btn.primary{
-background:linear-gradient(135deg,#6f7cff,#3fd0ff);
+background:linear-gradient(135deg,#6f7cff,#4ecbff);
 color:white;
 }
 
 .btn.ghost{
 border:1px solid rgba(255,255,255,.2);
+color:white;
 }
 
-/* LINKS */
+/ LINKS /
 
 .hero-links{
 display:flex;
 gap:10px;
-flex-wrap:wrap;
-margin-top:10px;
+margin-bottom:14px;
 }
 
 .chip{
-padding:8px 14px;
+padding:6px 12px;
 border-radius:20px;
 border:1px solid rgba(255,255,255,.2);
-background:rgba(255,255,255,.05);
 font-size:13px;
 }
 
-/* DIVIDER */
-
-.hero-divider{
-height:1px;
-width:320px;
-background:rgba(255,255,255,.15);
-margin:14px 0;
-}
-
-/* SKILLS */
+/ SKILLS /
 
 .hero-skills{
 display:flex;
@@ -103,37 +117,32 @@ flex-wrap:wrap;
 }
 
 .pill{
-padding:8px 14px;
+padding:6px 12px;
 border-radius:20px;
 border:1px solid rgba(255,255,255,.2);
-background:rgba(255,255,255,.03);
 font-size:13px;
 }
 
-/* IMAGE */
+/ IMAGE /
 
 .portrait-card{
-border-radius:20px;
+border-radius:16px;
 border:1px solid rgba(255,255,255,.1);
 padding:10px;
-background:rgba(255,255,255,.05);
 }
 
 .portrait{
 width:100%;
-border-radius:14px;
+border-radius:12px;
 }
 
-/* MOBILE */
+/ MOBILE */
 
 @media(max-width:800px){
-
 .hero{
 grid-template-columns:1fr;
 }
-
 .hero-title{
 font-size:40px;
 }
-
 }
