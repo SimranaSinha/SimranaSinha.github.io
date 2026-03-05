@@ -22,7 +22,7 @@ body{
 }
 
 a{color:inherit; text-decoration:none}
-a:hover{opacity:.9}
+a:hover{opacity:.92}
 
 .container{
   width:min(1100px, 92%);
@@ -30,6 +30,7 @@ a:hover{opacity:.9}
   padding: 28px 0 70px;
 }
 
+/* ───────────────────────── Header/Nav ───────────────────────── */
 .header{
   position:sticky;
   top:0;
@@ -80,6 +81,7 @@ a:hover{opacity:.9}
   padding: 10px 12px;
 }
 
+/* ───────────────────────── Hero ───────────────────────── */
 .hero{
   display:grid;
   grid-template-columns: 1.3fr .9fr;
@@ -102,11 +104,24 @@ a:hover{opacity:.9}
   line-height: .92;
   letter-spacing: .02em;
 }
+
+.hero-sub{
+  margin:14px 0 18px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
 .muted{color:var(--muted)}
 .small{font-size: 13px}
-.hero-sub{margin:14px 0 18px; color: var(--muted); font-size: 16px}
 
-.cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:14px}
+/* Buttons */
+.cta-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom: 14px;
+}
+
 .btn{
   display:inline-flex;
   align-items:center;
@@ -118,46 +133,55 @@ a:hover{opacity:.9}
   box-shadow: 0 10px 30px rgba(0,0,0,.35);
   font-weight:600;
 }
+
 .btn.primary{
   background: linear-gradient(135deg, rgba(124,92,255,.90), rgba(36,211,238,.55));
   border-color: rgba(255,255,255,.18);
 }
+
 .btn.ghost{background: transparent}
 .btn.tiny{padding: 9px 11px; border-radius: 12px; font-size: 13px}
 
-.link-row{display:flex; gap:10px; flex-wrap:wrap}
+/* ✅ NEW: Separate Links row and Skills row in hero */
+.hero-links{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top: 6px;
+}
 
+.hero-skills{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top: 14px;
+}
+
+/* Link chips */
 .chip{
-  padding: 8px 10px;
+  padding: 8px 12px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: rgba(255,255,255,.04);
   color: var(--muted);
   font-size: 13px;
 }
-
-/* NEW: skill chips row under the links */
-.skill-row{
-  margin-top: 12px;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
+.chip:hover{
+  background: rgba(255,255,255,.08);
+  color: rgba(255,255,255,.85);
 }
 
-.pill-grid{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
+/* Skill pills */
 .pill{
-  padding: 8px 10px;
+  padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
   color: rgba(255,255,255,.78);
   font-size: 13px;
 }
 
+/* Portrait */
 .portrait-card{
   border-radius: var(--radius);
   border: 1px solid var(--border);
@@ -172,6 +196,7 @@ a:hover{opacity:.9}
   border: 1px solid var(--border);
 }
 
+/* ───────────────────────── Sections / Cards ───────────────────────── */
 .section{padding: 26px 0 6px}
 .section h2{
   margin: 0 0 14px;
@@ -196,6 +221,13 @@ a:hover{opacity:.9}
 .bullets{margin: 10px 0 0; padding-left: 18px; color: var(--muted)}
 .bullets li{margin: 7px 0}
 
+/* Skills section pill grid */
+.pill-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
 .row{display:flex; gap:10px; align-items:center}
 .row.space{justify-content:space-between}
 
@@ -208,13 +240,16 @@ a:hover{opacity:.9}
   color: rgba(255,255,255,.85);
 }
 
-.project{transition: transform .15s ease, background .15s ease, border-color .15s ease}
+.project{
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
 .project:hover{
   transform: translateY(-2px);
   background: var(--panel2);
   border-color: rgba(255,255,255,.18);
 }
 
+/* Timeline */
 .timeline{
   display:grid;
   gap: 14px;
@@ -234,6 +269,7 @@ a:hover{opacity:.9}
   box-shadow: 0 0 0 4px rgba(124,92,255,.18);
 }
 
+/* Footer */
 .footer{
   margin-top: 24px;
   padding-top: 16px;
@@ -241,7 +277,7 @@ a:hover{opacity:.9}
   color: var(--muted);
 }
 
-/* Mobile */
+/* ───────────────────────── Mobile ───────────────────────── */
 @media (max-width: 880px){
   .hero{grid-template-columns: 1fr; gap: 14px}
   .grid.two{grid-template-columns: 1fr}
