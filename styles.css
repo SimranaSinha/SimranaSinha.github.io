@@ -30,7 +30,7 @@ a:hover{opacity:.92}
   padding: 28px 0 70px;
 }
 
-/* ───────────────────────── Header/Nav ───────────────────────── */
+/* ───────── Header/Nav ───────── */
 .header{
   position:sticky;
   top:0;
@@ -81,7 +81,7 @@ a:hover{opacity:.92}
   padding: 10px 12px;
 }
 
-/* ───────────────────────── Hero ───────────────────────── */
+/* ───────── Hero ───────── */
 .hero{
   display:grid;
   grid-template-columns: 1.3fr .9fr;
@@ -142,19 +142,33 @@ a:hover{opacity:.92}
 .btn.ghost{background: transparent}
 .btn.tiny{padding: 9px 11px; border-radius: 12px; font-size: 13px}
 
-/* ✅ NEW: Separate Links row and Skills row in hero */
+<div class="hero-divider"></div>
+
+/* ✅ Links row (Row 1) */
 .hero-links{
   display:flex;
-  gap:12px;
+  gap:10px;
   flex-wrap:wrap;
-  margin-top: 6px;
+  margin-top: 10px;
+  align-items:center;
 }
 
+/* Divider between links and skills */
+.hero-divider{
+  height:1px;
+  width: 360px;
+  max-width: 100%;
+  background: rgba(255,255,255,.10);
+  margin: 12px 0 10px;
+}
+
+/* ✅ Skills row (Row 2) */
 .hero-skills{
   display:flex;
-  gap:12px;
+  gap:10px;
   flex-wrap:wrap;
-  margin-top: 14px;
+  margin-top: 0px;
+  align-items:center;
 }
 
 /* Link chips */
@@ -162,22 +176,22 @@ a:hover{opacity:.92}
   padding: 8px 12px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,.04);
-  color: var(--muted);
+  background: rgba(255,255,255,.05);
+  color: rgba(255,255,255,.78);
   font-size: 13px;
 }
 .chip:hover{
-  background: rgba(255,255,255,.08);
-  color: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.10);
+  color: rgba(255,255,255,.92);
 }
 
 /* Skill pills */
 .pill{
-  padding: 8px 12px;
+  padding: 7px 12px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,.12);
   background: rgba(255,255,255,.03);
-  color: rgba(255,255,255,.78);
+  color: rgba(255,255,255,.72);
   font-size: 13px;
 }
 
@@ -196,7 +210,7 @@ a:hover{opacity:.92}
   border: 1px solid var(--border);
 }
 
-/* ───────────────────────── Sections / Cards ───────────────────────── */
+/* ───────── Sections / Cards ───────── */
 .section{padding: 26px 0 6px}
 .section h2{
   margin: 0 0 14px;
@@ -221,7 +235,6 @@ a:hover{opacity:.92}
 .bullets{margin: 10px 0 0; padding-left: 18px; color: var(--muted)}
 .bullets li{margin: 7px 0}
 
-/* Skills section pill grid */
 .pill-grid{
   display:flex;
   flex-wrap:wrap;
@@ -277,7 +290,7 @@ a:hover{opacity:.92}
   color: var(--muted);
 }
 
-/* ───────────────────────── Mobile ───────────────────────── */
+/* ───────── Mobile ───────── */
 @media (max-width: 880px){
   .hero{grid-template-columns: 1fr; gap: 14px}
   .grid.two{grid-template-columns: 1fr}
