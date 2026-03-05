@@ -5,13 +5,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Simran Sinha | Data Portfolio</title>
   <meta name="description" content="Simran Sinha — Data Analytics Engineering @ Northeastern University | Data Scientist" />
-  <link rel="stylesheet" href="styles.css?v=1" />
+
+  <!-- Icons (LinkedIn / GitHub / Tableau) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 
 <body>
   <header class="header">
     <nav class="nav">
-      <a class="brand" href="#top" aria-label="Home">SS</a>
+      <a class="brand" href="#top">SS</a>
 
       <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
@@ -27,14 +32,14 @@
   </header>
 
   <main id="top" class="container">
-    
+
     <!-- HERO -->
     <section class="hero">
       <div class="hero-left">
         <p class="kicker">DATA ANALYTICS ENGINEERING @ NORTHEASTERN UNIVERSITY</p>
 
         <h1 class="hero-title">
-          SIMRAN<br />
+          SIMRAN<br/>
           <span class="muted">SINHA</span>
         </h1>
 
@@ -42,68 +47,80 @@
 
         <div class="cta-row">
           <a class="btn primary" href="#contact">Get in touch</a>
+          <!-- Opens in a new tab (viewable), not forced download -->
           <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
         </div>
 
-        <div class="hero-links">
-          <a class="chip" href="https://www.linkedin.com/in/simranasinha/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="chip" href="https://github.com/SimranaSinha" target="_blank" rel="noopener">GitHub</a>
-          <a class="chip" href="https://public.tableau.com/app/profile/simran.abhay.sinha/vizzes" target="_blank" rel="noopener">Tableau</a>
+        <!-- ICON LINKS (replace bubble chips) -->
+        <div class="hero-links" aria-label="Social links">
+          <a class="icon-link" href="https://www.linkedin.com/in/simranasinha/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a class="icon-link" href="https://github.com/SimranaSinha" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a class="icon-link" href="https://public.tableau.com/app/profile/simran.abhay.sinha/vizzes" target="_blank" rel="noopener" aria-label="Tableau Public">
+            <i class="fa-solid fa-chart-simple"></i>
+          </a>
         </div>
 
-        <div class="hero-skills">
+        <!-- SKILLS PILLS -->
+        <div class="hero-skills" aria-label="Key skills">
           <span class="pill">SQL</span>
           <span class="pill">Python</span>
-          <span class="pill">Tableau</span>
           <span class="pill">Power BI</span>
           <span class="pill">Excel</span>
           <span class="pill">PowerPoint</span>
+          <span class="pill">Tableau</span>
         </div>
       </div>
 
       <div class="hero-right">
         <div class="portrait-card">
-          <img class="portrait" src="profile.jpg" alt="Simran Sinha" />
+          <img class="portrait" src="profile.jpg" alt="Simran Sinha">
         </div>
       </div>
     </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <h2>About</h2>
-  <div class="card">
-    <p>
-      I’m currently pursuing a Master’s in Data Analytics at Northeastern University in Boston.
-      I enjoy turning complex datasets into clear, actionable insights that help teams make better decisions.
-    </p>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="card">
+        <p>
+          I’m currently pursuing a Master’s in Data Analytics at Northeastern University in Boston.
+          I enjoy turning complex datasets into clear, actionable insights that help teams make better decisions.
+        </p>
 
-    <p>
-      Previously, I worked as a Data Science Lead at Crewasis, where I supported data processing, predictive modeling,
-      and analytics-driven solutions for business decision-making. I’ve also worked as a Data Analytics Intern at
-      Champion Learns, using data analysis to support initiatives focused on growth, exposure, and engagement.
-    </p>
+        <p>
+          Previously, I worked as a Data Science Lead at Crewasis, where I supported data processing, predictive modeling,
+          and analytics-driven solutions for business decision-making. I’ve also worked as a Data Analytics Intern at
+          Champion Learns, using data analysis to support initiatives focused on growth, exposure, and engagement.
+        </p>
 
-    <p class="muted">
-      I’m proficient in Python, SQL, Tableau, statistical analysis, and data modeling. I’m actively seeking full-time
-      opportunities starting May 2026. If you’d like to connect or collaborate, feel free to reach out.
-    </p>
-  </div>
-</section>
+        <p class="muted">
+          I’m proficient in Python, SQL, Tableau, statistical analysis, and data modeling. I’m actively seeking full-time
+          opportunities starting May 2026. If you’d like to connect or collaborate, feel free to reach out.
+        </p>
+      </div>
+    </section>
 
     <!-- EDUCATION -->
     <section id="education" class="section">
       <h2>Education</h2>
       <div class="grid two">
         <div class="card">
-          <h3>MS, Data Analytics Engineering</h3>
-          <p class="muted small">Northeastern University • Boston, MA • 2024–2026</p>
+          <h3>Northeastern University</h3>
+          <p class="muted small">MS, Data Analytics Engineering • Boston, MA</p>
+          <p class="muted small">2024 – 2026</p>
           <ul class="bullets">
             <li>Coursework: Data Mining, Visualization, Deep Learning, Applied GenAI</li>
           </ul>
         </div>
+
         <div class="card">
           <h3>B.Tech, Electronics & Telecommunication</h3>
-          <p class="muted small">Mumbai, India • 2019–2023</p>
+          <p class="muted small">Mumbai, India</p>
+          <p class="muted small">2019 – 2023</p>
           <ul class="bullets">
             <li>Strong foundation in programming, algorithms, and data structures</li>
           </ul>
@@ -112,72 +129,72 @@
     </section>
 
     <!-- EXPERIENCE -->
-<section id="experience" class="section">
-  <h2>Experience</h2>
+    <section id="experience" class="section">
+      <h2>Experience</h2>
 
-  <div class="timeline">
+      <div class="timeline">
 
-    <!-- Crewasis group (one hierarchy) -->
-    <div class="t-item">
-      <div class="t-dot"></div>
-      <div class="card">
-        <h3>Crewasis.AI</h3>
-        <p class="muted small">Remote</p>
+        <!-- Crewasis group (one hierarchy) -->
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="card">
+            <h3>Crewasis.AI</h3>
+            <p class="muted small">Remote</p>
 
-        <div class="subrole">
-          <div class="subrole-head">
-            <strong>Data Science Lead</strong>
-            <span class="muted small">Nov 2025 – Dec 2025</span>
+            <div class="subrole">
+              <div class="subrole-head">
+                <strong>Data Science Lead</strong>
+                <span class="muted small">Nov 2025 – Dec 2025</span>
+              </div>
+              <ul class="bullets">
+                <li>Built analytics workflows and dashboards for client-facing insights</li>
+                <li>Automated reporting pipelines in Python to improve delivery speed</li>
+                <li>Synthesized research findings into actionable recommendations</li>
+              </ul>
+            </div>
+
+            <div class="subrole">
+              <div class="subrole-head">
+                <strong>Data Science Intern</strong>
+                <span class="muted small">2024</span>
+              </div>
+              <ul class="bullets">
+                <li>Supported analysis and reporting to improve decision-making</li>
+              </ul>
+            </div>
           </div>
-          <ul class="bullets">
-            <li>Built analytics workflows and dashboards for client-facing insights</li>
-            <li>Automated reporting pipelines in Python to improve delivery speed</li>
-            <li>Synthesized research findings into actionable recommendations</li>
-          </ul>
         </div>
 
-        <div class="subrole">
-          <div class="subrole-head">
-            <strong>Data Science Intern</strong>
-            <span class="muted small">2024</span>
+        <!-- Prodigy -->
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="card">
+            <h3>Data Science Intern</h3>
+            <p class="muted small">Prodigy • Mumbai, India • Aug 2024 – Aug 2024</p>
+            <ul class="bullets">
+              <li>Developed machine learning models using Python and Scikit-Learn to predict customer purchases, increasing marketing ROI by 25%</li>
+              <li>Cleaned, transformed, and validated customer datasets using Python, improving data consistency and model accuracy across workflows</li>
+              <li>Designed interactive Power BI dashboards to visualize customer segments and KPIs, driving a 20% increase in campaign engagement</li>
+              <li>Documented standardized data workflows and pipelines in Git and Jupyter notebooks, ensuring reproducibility while reducing onboarding time</li>
+              <li>Assisted in model evaluation and feature selection to improve prediction accuracy and model reliability</li>
+            </ul>
           </div>
-          <ul class="bullets">
-            <li>Supported analysis and reporting to improve decision-making</li>
-          </ul>
         </div>
+
+        <!-- Champion Learns -->
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="card">
+            <h3>Data Analytics Intern</h3>
+            <p class="muted small">Champion Learns • 2023</p>
+            <ul class="bullets">
+              <li>Performed segmentation and analysis to improve engagement</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
-    </div>
-
-    <!-- Other experience -->
-    <div class="t-item">
-      <div class="t-dot"></div>
-      <div class="card">
-        <h3>Data Analytics Intern</h3>
-        <p class="muted small">Champion Learns • 2023</p>
-        <ul class="bullets">
-          <li>Performed segmentation and analysis to improve engagement</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="t-item">
-  <div class="t-dot"></div>
-  <div class="card">
-    <h3>Data Science Intern</h3>
-    <p class="muted small">Prodigy • Mumbai, India • Aug 2024 – Aug 2024</p>
-
-    <ul class="bullets">
-      <li>Developed machine learning models using Python and Scikit-Learn to predict customer purchases, increasing marketing ROI by 25%</li>
-      <li>Cleaned, transformed, and validated customer datasets using Python, improving data consistency and model accuracy across workflows</li>
-      <li>Designed interactive Power BI dashboards to visualize customer segments and KPIs, driving a 20% increase in campaign engagement</li>
-      <li>Documented standardized data workflows and pipelines in Git and Jupyter notebooks, ensuring reproducibility while reducing onboarding time</li>
-      <li>Assisted in model evaluation and feature selection to improve prediction accuracy and model reliability</li>
-    </ul>
-  </div>
-</div>
-
-  </div>
-</section>
+    </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
@@ -185,11 +202,22 @@
       <div class="grid two">
         <a class="card project" href="https://github.com/SimranaSinha/SpotIt-Single-and-Multi-Object-Detection-System" target="_blank" rel="noopener">
           <h3>SpotIt: Object Detection System</h3>
-          <p class="muted small">YOLOv8 • Synthetic data • mAP evaluation</p>
+          <p class="muted">Synthetic data generation + YOLOv8 training + mAP evaluation + live detection demo.</p>
         </a>
+
         <a class="card project" href="https://github.com/SimranaSinha/Financial-Operations-analytics" target="_blank" rel="noopener">
           <h3>Financial Operations Analytics</h3>
-          <p class="muted small">Python • Analytics • Reporting</p>
+          <p class="muted">Operational reporting and analytics workflow for financial performance tracking.</p>
+        </a>
+
+        <a class="card project" href="https://github.com/SimranaSinha/Netflix_dashboard" target="_blank" rel="noopener">
+          <h3>Netflix Dashboard</h3>
+          <p class="muted">Exploratory analysis and dashboarding to uncover genre, rating, and release-year trends.</p>
+        </a>
+
+        <a class="card project" href="https://github.com/SimranaSinha/Airways_Insights" target="_blank" rel="noopener">
+          <h3>Airways Insights</h3>
+          <p class="muted">Data analysis + Tableau dashboards for operational insights.</p>
         </a>
       </div>
     </section>
@@ -199,14 +227,16 @@
       <h2>Skills</h2>
       <div class="card">
         <div class="pill-grid">
-          <span class="pill">SQL</span>
           <span class="pill">Python</span>
-          <span class="pill">Pandas</span>
+          <span class="pill">SQL</span>
           <span class="pill">Tableau</span>
           <span class="pill">Power BI</span>
           <span class="pill">Excel</span>
           <span class="pill">PowerPoint</span>
-          <span class="pill">AWS</span>
+          <span class="pill">Pandas</span>
+          <span class="pill">Scikit-learn</span>
+          <span class="pill">Data Modeling</span>
+          <span class="pill">Statistical Analysis</span>
         </div>
       </div>
     </section>
@@ -215,16 +245,19 @@
     <section id="contact" class="section">
       <h2>Contact</h2>
       <div class="card">
-        <p class="muted">Email: <a href="mailto:simran.abhay.sinha@gmail.com">simran.abhay.sinha@gmail.com</a></p>
-        <p class="muted">LinkedIn: <a href="https://www.linkedin.com/in/simranasinha/" target="_blank" rel="noopener">simranasinha</a></p>
-      </div>
-
-      <div class="footer small">
-        © <span id="year"></span> Simran Sinha
+        <p class="muted">Best way to reach me:</p>
+        <ul class="bullets">
+          <li><strong>Email:</strong> <a href="mailto:simran.abhay.sinha@gmail.com">simran.abhay.sinha@gmail.com</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/simranasinha/" target="_blank" rel="noopener">linkedin.com/in/simranasinha</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/SimranaSinha" target="_blank" rel="noopener">github.com/SimranaSinha</a></li>
+        </ul>
       </div>
     </section>
-  </main>
 
-  <script src="script.js?v=1"></script>
+    <footer class="footer">
+      <p class="small muted">© <span id="year"></span> Simran Sinha</p>
+    </footer>
+
+  </main>
 </body>
 </html>
