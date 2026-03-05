@@ -1,76 +1,195 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Simran Sinha | Data Portfolio</title>
-<link rel="stylesheet" href="styles.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simran Sinha | Data Portfolio</title>
+  <meta name="description" content="Simran Sinha — Data Analytics Engineering @ Northeastern University | Data Scientist" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
+  <header class="header">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Home">SS</a>
 
-<header class="header">
-<nav class="nav">
-<a class="brand" href="#top">SS</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-<div class="nav-links">
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-</header>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </nav>
+  </header>
 
-<main class="container">
+  <main id="top" class="container">
 
-<section class="hero">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <p class="kicker">DATA ANALYTICS ENGINEERING @ NORTHEASTERN UNIVERSITY</p>
 
-<div class="hero-left">
+        <h1 class="hero-title">
+          SIMRAN<br/>
+          <span class="muted">SINHA</span>
+        </h1>
 
-<p class="kicker">DATA ANALYTICS ENGINEERING @ NORTHEASTERN UNIVERSITY</p>
+        <p class="hero-sub">Data Scientist • Data Analyst • Boston, MA</p>
 
-<h1 class="hero-title">
-SIMRAN<br>
-<span class="muted">SINHA</span>
-</h1>
+        <div class="cta-row">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+        </div>
 
-<p class="hero-sub">
-Data Scientist • Data Analyst • Boston, MA
-</p>
+        <div class="hero-links">
+          <a class="chip" href="https://www.linkedin.com/in/simranasinha/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="chip" href="https://github.com/SimranaSinha" target="_blank" rel="noopener">GitHub</a>
+          <a class="chip" href="https://public.tableau.com/app/profile/simran.abhay.sinha/vizzes" target="_blank" rel="noopener">Tableau</a>
+        </div>
 
-<div class="cta-row">
-<a class="btn primary" href="#contact">Get in touch</a>
-<a class="btn ghost" href="resume.pdf" target="_blank">View Resume</a>
-</div>
+        <div class="hero-skills">
+          <span class="pill">SQL</span>
+          <span class="pill">Python</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">Excel</span>
+          <span class="pill">PowerPoint</span>
+        </div>
+      </div>
 
-<div class="hero-links">
-<a class="chip" href="https://www.linkedin.com/in/simranasinha/" target="_blank">LinkedIn</a>
-<a class="chip" href="https://github.com/SimranaSinha" target="_blank">GitHub</a>
-<a class="chip" href="https://public.tableau.com/app/profile/simran.abhay.sinha/vizzes" target="_blank">Tableau</a>
-</div>
+      <div class="hero-right">
+        <div class="portrait-card">
+          <img class="portrait" src="profile.jpg" alt="Simran Sinha" />
+        </div>
+      </div>
+    </section>
 
-<div class="hero-skills">
-<span class="pill">SQL</span>
-<span class="pill">Python</span>
-<span class="pill">Power BI</span>
-<span class="pill">Excel</span>
-<span class="pill">PowerPoint</span>
-</div>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="card">
+        <p>
+          I’m pursuing an MS in Data Analytics Engineering at Northeastern University in Boston.
+          I turn messy, complex data into clear insights through analytics, dashboards, and machine learning.
+        </p>
+      </div>
+    </section>
 
-</div>
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>MS, Data Analytics Engineering</h3>
+          <p class="muted small">Northeastern University • Boston, MA • 2024–2026</p>
+          <ul class="bullets">
+            <li>Coursework: Data Mining, Visualization, Deep Learning, Applied GenAI</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>B.Tech, Electronics & Telecommunication</h3>
+          <p class="muted small">Mumbai, India • 2019–2023</p>
+          <ul class="bullets">
+            <li>Strong foundation in programming, algorithms, and data structures</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<div class="hero-right">
-<div class="portrait-card">
-<img class="portrait" src="profile.jpg" alt="Simran Sinha">
-</div>
-</div>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="card">
+            <div class="row space">
+              <div>
+                <h3>Data Science Lead</h3>
+                <p class="muted small">Crewasis.AI • Remote • Nov 2025 – Dec 2025</p>
+              </div>
+            </div>
+            <ul class="bullets">
+              <li>Built analytics workflows and dashboards for client-facing insights</li>
+              <li>Automated reporting pipelines in Python to improve delivery speed</li>
+              <li>Synthesized research findings into actionable recommendations</li>
+            </ul>
+          </div>
+        </div>
 
-</section>
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="card">
+            <h3>Data Science Intern</h3>
+            <p class="muted small">Crewasis.AI • 2024</p>
+            <ul class="bullets">
+              <li>Supported analysis and reporting to improve decision-making</li>
+            </ul>
+          </div>
+        </div>
 
-</main>
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="card">
+            <h3>Data Analytics Intern</h3>
+            <p class="muted small">Champion Learns • 2023</p>
+            <ul class="bullets">
+              <li>Performed segmentation and analysis to improve engagement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid two">
+        <a class="card project" href="https://github.com/SimranaSinha/SpotIt-Single-and-Multi-Object-Detection-System" target="_blank" rel="noopener">
+          <h3>SpotIt: Object Detection System</h3>
+          <p class="muted small">YOLOv8 • Synthetic data • mAP evaluation</p>
+        </a>
+        <a class="card project" href="https://github.com/SimranaSinha/Financial-Operations-analytics" target="_blank" rel="noopener">
+          <h3>Financial Operations Analytics</h3>
+          <p class="muted small">Python • Analytics • Reporting</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="card">
+        <div class="pill-grid">
+          <span class="pill">SQL</span>
+          <span class="pill">Python</span>
+          <span class="pill">Pandas</span>
+          <span class="pill">Tableau</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">Excel</span>
+          <span class="pill">Machine Learning</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="card">
+        <p class="muted">Email: <a href="mailto:simran.abhay.sinha@gmail.com">simran.abhay.sinha@gmail.com</a></p>
+        <p class="muted">LinkedIn: <a href="https://www.linkedin.com/in/simranasinha/" target="_blank" rel="noopener">simranasinha</a></p>
+      </div>
+
+      <div class="footer small">
+        © <span id="year"></span> Simran Sinha
+      </div>
+    </section>
+
+  </main>
+
+  <script src="./script.js"></script>
 </body>
 </html>
