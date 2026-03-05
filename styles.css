@@ -332,3 +332,99 @@ a:hover{opacity:.92}
     align-items:flex-start;
   }
 }
+
+/* ───────────────────────── Icon Links (Hero) ───────────────────────── */
+.icon-link{
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  color: rgba(255,255,255,.88);
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.icon-link i{
+  font-size: 18px;
+}
+
+.icon-link:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.18);
+}
+
+/* keep your separation line between links and skills */
+.hero-links{
+  border-top: 1px solid rgba(255,255,255,.10);
+  padding-top: 12px;
+}
+
+/* ───────────────────────── Contact Icons ───────────────────────── */
+.contact-card{
+  padding: 22px;
+}
+
+.contact-list{
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.contact-item{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.contact-item:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.07);
+  border-color: rgba(255,255,255,.18);
+}
+
+.contact-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(124,92,255,.35), rgba(36,211,238,.22));
+  border: 1px solid rgba(255,255,255,.12);
+  color: rgba(255,255,255,.95);
+  flex: 0 0 auto;
+}
+
+.contact-icon i{
+  font-size: 18px;
+}
+
+.contact-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.contact-text strong{
+  font-size: 14px;
+  color: rgba(255,255,255,.92);
+}
+
+.contact-text span{
+  font-size: 14px;
+  color: rgba(255,255,255,.70);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
