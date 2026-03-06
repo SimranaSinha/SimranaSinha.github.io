@@ -455,3 +455,17 @@ a:hover{opacity:.92}
   transform:translateY(-2px);
   color:white;
 }
+
+/* Cursor Glow Effect */
+
+.cursor-glow{
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(124,92,255,0.25) 0%, rgba(124,92,255,0.12) 30%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  transition: transform 0.08s linear;
+}
