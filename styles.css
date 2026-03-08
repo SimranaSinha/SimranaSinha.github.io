@@ -569,3 +569,16 @@ a:hover{
 }
 
 }
+
+.more-projects-wrap{
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.pill-grid{
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
