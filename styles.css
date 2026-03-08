@@ -1,29 +1,56 @@
+/* =========================================================
+   COLOR VARIABLES / GLOBAL DESIGN TOKENS
+   ========================================================= */
+
 :root{
-  --bg:#0b0f17;
-  --panel:rgba(255,255,255,.06);
-  --panel2:rgba(255,255,255,.09);
-  --text:rgba(255,255,255,.92);
-  --muted:rgba(255,255,255,.65);
-  --border:rgba(255,255,255,.10);
-  --shadow:0 14px 45px rgba(0,0,0,.55);
-  --radius:18px;
+  --bg:#0b0f17;                 /* Main dark background */
+  --panel:rgba(255,255,255,.06); /* Card background */
+  --panel2:rgba(255,255,255,.09); /* Hover card background */
+  --text:rgba(255,255,255,.92);  /* Main text color */
+  --muted:rgba(255,255,255,.65); /* Secondary text */
+  --border:rgba(255,255,255,.10); /* Borders */
+  --shadow:0 14px 45px rgba(0,0,0,.55); /* Card shadow */
+  --radius:18px;                /* Rounded corner size */
 }
 
+
+/* =========================================================
+   GLOBAL PAGE SETTINGS
+   ========================================================= */
+
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+html{
+  scroll-behavior:smooth; /* smooth scroll when clicking navbar links */
+}
 
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+
+  /* gradient background for portfolio */
   background:
     radial-gradient(900px 500px at 15% -10%, rgba(124,92,255,.20), transparent 60%),
     radial-gradient(900px 500px at 90% 10%, rgba(36,211,238,.16), transparent 55%),
     var(--bg);
+
   color:var(--text);
 }
 
-a{color:inherit; text-decoration:none}
-a:hover{opacity:.92}
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+a:hover{
+  opacity:.92;
+}
+
+
+/* =========================================================
+   MAIN PAGE CONTAINER
+   keeps content centered
+   ========================================================= */
 
 .container{
   width:min(1100px, 92%);
@@ -31,12 +58,17 @@ a:hover{opacity:.92}
   padding: 28px 0 70px;
 }
 
-/* ───────────────────────── Header/Nav ───────────────────────── */
+
+/* =========================================================
+   HEADER / NAVBAR
+   ========================================================= */
+
 .header{
-  position:sticky;
+  position:sticky; /* navbar stays at top while scrolling */
   top:0;
   z-index:50;
   backdrop-filter: blur(10px);
+
   background: rgba(11,15,23,.65);
   border-bottom: 1px solid var(--border);
 }
@@ -45,389 +77,395 @@ a:hover{opacity:.92}
   width:min(1100px, 92%);
   margin:0 auto;
   padding: 14px 0;
+
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:16px;
 }
 
+/* Logo circle (SS) */
+
 .brand{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  width:40px; height:40px;
+
+  width:40px;
+  height:40px;
+
   border-radius:12px;
-  background: linear-gradient(135deg, rgba(124,92,255,.35), rgba(36,211,238,.22));
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+
+  background: linear-gradient(
+      135deg,
+      rgba(124,92,255,.35),
+      rgba(36,211,238,.22)
+  );
+
+  border:1px solid var(--border);
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+
   font-weight:700;
 }
+
+
+/* Navbar links */
 
 .nav-links{
   display:flex;
   gap:18px;
   align-items:center;
-  color: var(--muted);
-  font-size: 14px;
+
+  color:var(--muted);
+  font-size:14px;
 }
-.nav-links a{padding:8px 10px; border-radius:10px}
-.nav-links a:hover{background: var(--panel); color: var(--text);}
+
+.nav-links a{
+  padding:8px 10px;
+  border-radius:10px;
+}
+
+.nav-links a:hover{
+  background:var(--panel);
+  color:var(--text);
+}
+
+/* Mobile menu button */
 
 .nav-toggle{
   display:none;
   border:1px solid var(--border);
-  background: var(--panel);
-  color: var(--text);
-  border-radius: 12px;
-  padding: 10px 12px;
+  background:var(--panel);
+  color:var(--text);
+
+  border-radius:12px;
+  padding:10px 12px;
   cursor:pointer;
 }
 
-/* ───────────────────────── Hero ───────────────────────── */
+
+/* =========================================================
+   HERO SECTION
+   name + photo area
+   ========================================================= */
+
 .hero{
   display:grid;
-  grid-template-columns: 1.25fr .95fr;
-  gap: 28px;
-  padding: 30px 0 10px;
+  grid-template-columns:1.25fr .95fr; /* text | image */
+
+  gap:28px;
+  padding:30px 0 10px;
   align-items:center;
 }
 
-.hero-left{max-width:620px}
+.hero-left{
+  max-width:620px;
+}
+
+/* small title above name */
 
 .kicker{
   margin:0 0 12px;
-  color: var(--muted);
+  color:var(--muted);
   letter-spacing:.08em;
   text-transform:uppercase;
-  font-size: 12px;
+  font-size:12px;
 }
+
+/* big name text */
 
 .hero-title{
   margin:0;
-  font-size: clamp(44px, 6.2vw, 78px);
-  line-height: .92;
-  letter-spacing: .02em;
+  font-size:clamp(44px,6.2vw,78px);
+  line-height:.92;
 }
-.hero-title .muted{opacity:.75}
 
 .hero-sub{
   margin:14px 0 18px;
-  color: var(--muted);
-  font-size: 17px;
-  line-height:1.5;
+  color:var(--muted);
+  font-size:17px;
 }
 
-.muted{color:var(--muted)}
-.small{font-size: 13px}
+/* utility text */
 
-/* Buttons */
+.muted{color:var(--muted)}
+.small{font-size:13px}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
 .cta-row{
   display:flex;
   gap:12px;
   flex-wrap:wrap;
-  margin-bottom: 14px;
+  margin-bottom:14px;
 }
 
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding: 12px 16px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: var(--panel);
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
-  font-weight:600;
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, filter .18s ease;
-}
-.btn:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 14px 45px rgba(0,0,0,.50);
-}
-.btn.primary{
-  background: linear-gradient(135deg, rgba(124,92,255,.92), rgba(36,211,238,.55));
-  border-color: rgba(255,255,255,.18);
-}
-.btn.primary:hover{filter:brightness(1.05)}
-.btn.ghost{background: transparent}
 
-/* ✅ Links + Skills separator */
+  padding:12px 16px;
+  border-radius:14px;
+
+  border:1px solid var(--border);
+  background:var(--panel);
+
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+  font-weight:600;
+
+  transition: transform .18s ease;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn.primary{
+  background:linear-gradient(
+      135deg,
+      rgba(124,92,255,.92),
+      rgba(36,211,238,.55)
+  );
+}
+
+.btn.ghost{
+  background:transparent;
+}
+
+
+/* =========================================================
+   HERO SOCIAL ICONS
+   ========================================================= */
+
 .hero-links{
   display:flex;
   gap:12px;
   flex-wrap:wrap;
-  margin-top: 6px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255,255,255,.10);
+
+  margin-top:6px;
+  padding-top:12px;
+
+  border-top:1px solid rgba(255,255,255,.10);
 }
 
-/* ✅ Icon buttons for LinkedIn/GitHub/Tableau */
 .icon-link{
   width:42px;
   height:42px;
+
   display:flex;
   align-items:center;
   justify-content:center;
+
   border-radius:12px;
+
   border:1px solid rgba(255,255,255,.15);
-  background: rgba(255,255,255,.03);
-  color: rgba(255,255,255,.90);
-  font-size: 20px;
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
-}
-.icon-link:hover{
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, rgba(124,92,255,.90), rgba(36,211,238,.55));
-  border-color: rgba(255,255,255,.22);
+  background:rgba(255,255,255,.03);
+
+  font-size:20px;
+
+  transition:transform .18s ease;
 }
 
-/* Skills */
+.icon-link:hover{
+  transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   SKILLS PILLS
+   ========================================================= */
+
 .hero-skills{
   display:flex;
   gap:10px;
   flex-wrap:wrap;
-  margin-top: 14px;
+  margin-top:14px;
 }
 
 .pill{
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.02);
-  color: rgba(255,255,255,.80);
-  font-size: 13px;
-  letter-spacing: .01em;
+  padding:8px 12px;
+  border-radius:999px;
+
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.02);
+
+  font-size:13px;
 }
 
-/* Portrait */
+
+/* =========================================================
+   PROFILE IMAGE CARD
+   ========================================================= */
+
 .portrait-card{
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-  box-shadow: var(--shadow);
-  padding: 14px;
+  border-radius:var(--radius);
+
+  border:1px solid var(--border);
+  background:linear-gradient(
+      180deg,
+      rgba(255,255,255,.06),
+      rgba(255,255,255,.03)
+  );
+
+  box-shadow:var(--shadow);
+  padding:14px;
 }
+
 .portrait{
   width:100%;
-  height:auto;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  display:block;
+  border-radius:14px;
 }
 
-/* ───────────────────────── Sections / Cards ───────────────────────── */
-.section{padding: 26px 0 6px}
+
+/* =========================================================
+   GENERIC SECTION STYLING
+   ========================================================= */
+
+.section{
+  padding:26px 0 6px;
+}
 
 .section h2{
-  margin: 0 0 14px;
-  font-size: 22px;
-  letter-spacing: .01em;
+  margin:0 0 14px;
+  font-size:22px;
 }
+
+
+/* =========================================================
+   CARDS
+   used for projects / education / experience
+   ========================================================= */
 
 .card{
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background: var(--panel);
-  box-shadow: 0 12px 35px rgba(0,0,0,.35);
-  padding: 16px;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  background:var(--panel);
+
+  box-shadow:0 12px 35px rgba(0,0,0,.35);
+
+  padding:16px;
 }
-.card h3{margin: 0 0 6px; font-size: 18px}
-.card p{margin: 10px 0}
 
-.grid{display:grid; gap:14px}
-.grid.two{grid-template-columns: repeat(2, minmax(0,1fr))}
+.card h3{
+  margin:0 0 6px;
+  font-size:18px;
+}
 
-.bullets{margin: 10px 0 0; padding-left: 18px; color: var(--muted)}
-.bullets li{margin: 7px 0}
+.card p{
+  margin:10px 0;
+}
 
-/* Projects hover */
+
+/* =========================================================
+   GRID LAYOUT
+   ========================================================= */
+
+.grid{
+  display:grid;
+  gap:14px;
+}
+
+.grid.two{
+  grid-template-columns:repeat(2,1fr);
+}
+
+
+/* =========================================================
+   BULLET LIST
+   ========================================================= */
+
+.bullets{
+  margin:10px 0 0;
+  padding-left:18px;
+  color:var(--muted);
+}
+
+.bullets li{
+  margin:7px 0;
+}
+
+
+/* =========================================================
+   PROJECT CARD HOVER EFFECT
+   ========================================================= */
+
 .project{
-  transition: transform .15s ease, background .15s ease, border-color .15s ease;
-}
-.project:hover{
-  transform: translateY(-2px);
-  background: var(--panel2);
-  border-color: rgba(255,255,255,.18);
+  transition:transform .15s ease;
 }
 
-/* Skills section pill grid */
+.project:hover{
+  transform:translateY(-2px);
+  background:var(--panel2);
+}
+
+
+/* =========================================================
+   PROJECT TECH STACK TAGS
+   ========================================================= */
+
 .pill-grid{
   display:flex;
   flex-wrap:wrap;
   gap:10px;
+  margin-top:12px;
 }
 
-/* ───────────────────────── Timeline ───────────────────────── */
+
+/* =========================================================
+   EXPERIENCE TIMELINE
+   ========================================================= */
+
 .timeline{
   display:grid;
-  gap: 14px;
+  gap:14px;
 }
 
 .t-item{
   display:grid;
-  grid-template-columns: 16px 1fr;
-  gap: 12px;
-  align-items:start;
+  grid-template-columns:16px 1fr;
+  gap:12px;
 }
 
 .t-dot{
-  width: 12px;
-  height: 12px;
-  margin-top: 18px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, rgba(124,92,255,.9), rgba(36,211,238,.7));
-  box-shadow: 0 0 0 4px rgba(124,92,255,.18);
+  width:12px;
+  height:12px;
+
+  margin-top:18px;
+  border-radius:999px;
+
+  background:linear-gradient(
+      135deg,
+      rgba(124,92,255,.9),
+      rgba(36,211,238,.7)
+  );
 }
 
-/* Crewasis “one hierarchy” subroles */
+
+/* =========================================================
+   CREWASIS SUB ROLE STYLE
+   ========================================================= */
+
 .subrole{
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255,255,255,.10);
+  margin-top:14px;
+  padding-top:14px;
+
+  border-top:1px solid rgba(255,255,255,.10);
 }
 
 .subrole-head{
   display:flex;
   justify-content:space-between;
-  gap:12px;
-  align-items:baseline;
 }
 
-/* Footer */
-.footer{
-  margin-top: 24px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-}
 
-/* ───────────────────────── Mobile ───────────────────────── */
-@media (max-width: 880px){
-  .hero{grid-template-columns: 1fr; gap: 14px}
-  .grid.two{grid-template-columns: 1fr}
-}
-
-@media (max-width: 720px){
-  .nav-links{
-    display:none;
-    position:absolute;
-    top: 64px;
-    right: 4%;
-    left: 4%;
-    background: rgba(11,15,23,.92);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 10px;
-    flex-direction:column;
-    align-items:stretch;
-  }
-  .nav-links a{color: var(--text)}
-  .nav-toggle{display:inline-flex}
-  .nav-links.open{display:flex}
-}
-
-@media (max-width: 520px){
-  .subrole-head{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-}
-
-/* ───────────────────────── Icon Links (Hero) ───────────────────────── */
-.icon-link{
-  width: 42px;
-  height: 42px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,.04);
-  box-shadow: 0 10px 30px rgba(0,0,0,.25);
-  color: rgba(255,255,255,.88);
-  transition: transform .15s ease, background .15s ease, border-color .15s ease;
-}
-
-.icon-link i{
-  font-size: 18px;
-}
-
-.icon-link:hover{
-  transform: translateY(-2px);
-  background: rgba(255,255,255,.08);
-  border-color: rgba(255,255,255,.18);
-}
-
-/* keep your separation line between links and skills */
-.hero-links{
-  border-top: 1px solid rgba(255,255,255,.10);
-  padding-top: 12px;
-}
-
-/* ───────────────────────── Contact Icons ───────────────────────── */
-.contact-card{
-  padding: 22px;
-}
-
-.contact-list{
-  margin-top: 14px;
-  display: grid;
-  gap: 12px;
-}
-
-.contact-item{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
-  transition: transform .15s ease, background .15s ease, border-color .15s ease;
-}
-
-.contact-item:hover{
-  transform: translateY(-2px);
-  background: rgba(255,255,255,.07);
-  border-color: rgba(255,255,255,.18);
-}
-
-.contact-icon{
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, rgba(124,92,255,.35), rgba(36,211,238,.22));
-  border: 1px solid rgba(255,255,255,.12);
-  color: rgba(255,255,255,.95);
-  flex: 0 0 auto;
-}
-
-.contact-icon i{
-  font-size: 18px;
-}
-
-.contact-text{
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-
-.contact-text strong{
-  font-size: 14px;
-  color: rgba(255,255,255,.92);
-}
-
-.contact-text span{
-  font-size: 14px;
-  color: rgba(255,255,255,.70);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
 
 .contact-links{
   display:flex;
@@ -440,10 +478,8 @@ a:hover{opacity:.92}
   display:flex;
   align-items:center;
   gap:10px;
+
   font-size:16px;
-  font-weight:500;
-  color:var(--text);
-  transition:all .2s ease;
 }
 
 .contact-link i{
@@ -451,27 +487,85 @@ a:hover{opacity:.92}
   color:#8a6cff;
 }
 
-.contact-link:hover{
-  transform:translateY(-2px);
-  color:white;
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer{
+  margin-top:24px;
+  padding-top:16px;
+
+  border-top:1px solid var(--border);
+  color:var(--muted);
 }
 
-/* Cursor Glow Effect */
+
+/* =========================================================
+   CURSOR GLOW EFFECT
+   ========================================================= */
 
 .cursor-glow{
-  position: fixed;
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  pointer-events: none;
-  background: radial-gradient(circle, rgba(124,92,255,0.25) 0%, rgba(124,92,255,0.12) 30%, transparent 70%);
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  transition: transform 0.08s linear;
+  position:fixed;
+
+  width:350px;
+  height:350px;
+
+  border-radius:50%;
+  pointer-events:none;
+
+  background: radial-gradient(
+      circle,
+      rgba(124,92,255,0.25) 0%,
+      rgba(124,92,255,0.12) 30%,
+      transparent 70%
+  );
+
+  transform:translate(-50%, -50%);
 }
 
-.more-projects-wrap{
-  margin-top: 18px;
-  display: flex;
-  justify-content: center;
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width:880px){
+
+.hero{
+  grid-template-columns:1fr;
+}
+
+.grid.two{
+  grid-template-columns:1fr;
+}
+
+}
+
+@media (max-width:720px){
+
+.nav-links{
+  display:none;
+
+  position:absolute;
+  top:64px;
+  right:4%;
+  left:4%;
+
+  background:rgba(11,15,23,.92);
+
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:10px;
+
+  flex-direction:column;
+}
+
+.nav-toggle{
+  display:inline-flex;
+}
+
+.nav-links.open{
+  display:flex;
+}
+
 }
