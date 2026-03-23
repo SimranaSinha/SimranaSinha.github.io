@@ -583,6 +583,8 @@ a:hover{
   gap: 8px;
 }
 
+/* ======================================= * 
+
 /* Project title with status badge */
 .project-title{
   display:flex;
@@ -599,4 +601,5 @@ a:hover{
   border:1px solid rgba(255,255,255,.15);
   background: rgba(255,255,255,.06);
   color: rgba(255,255,255,.75);
+  white-space: nowrap;
 }
