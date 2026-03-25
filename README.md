@@ -8,7 +8,8 @@ The website highlights my projects, technical skills, leadership experience, and
 
 ## Sections in the Portfolio
 
-- **About Me** – Overview of my academic background, interests, and career focus  
+- **About Me** – Overview of my academic background, interests, and career focus
+- **Experience** - Job experience showing my technical skills
 - **Projects** – Selected data science, machine learning, and analytics projects with details and links  
 - **Skills** – Technical stack including Python, SQL, Power BI, Tableau, Machine Learning, and Deep Learning  
 - **Leadership** – Experience in organizations such as IEEE and Student Council  
