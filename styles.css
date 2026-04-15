@@ -570,10 +570,15 @@ a:hover{
 
 }
 
+/* Center the "More Projects" button properly */
 .more-projects-wrap{
   margin-top: 24px;
+
+  width: 100%;              /* make it full width */
   display: flex;
-  justify-content: center;
+
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical alignment (safe) */
 }
 
 .pill-grid{
