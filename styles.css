@@ -207,6 +207,7 @@ a:hover{
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  gap:6px;
 
   padding:12px 16px;
   border-radius:14px;
@@ -464,6 +465,36 @@ a:hover{
 
 
 /* =========================================================
+   DRIP STARTUP SECTION
+   ========================================================= */
+
+.drip-eyebrow{
+  font-size:11px;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 6px;
+  opacity:.7;
+}
+
+.drip-title{
+  font-size:20px;
+  font-weight:600;
+  margin:0 0 8px;
+}
+
+.drip-stack{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  padding-top:14px;
+  border-top:1px solid var(--border);
+  margin-top:4px;
+}
+
+
+/* =========================================================
    CONTACT SECTION
    ========================================================= */
 
@@ -588,7 +619,7 @@ a:hover{
   gap: 8px;
 }
 
-/* ======================================= * 
+/* ======================================= */
 
 /* Project title with status badge */
 .project-title{
